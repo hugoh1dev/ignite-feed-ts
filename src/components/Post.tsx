@@ -13,15 +13,15 @@ interface Author {
     avatarUrl: string;
 }
 
-interface Content {
-    type: 'paragraph' | 'link';
-    content: string;
-}
-
 interface PostProps {
     author: Author;
     publishedAt: Date;
     content: Content[];
+}
+
+interface Content {
+    type: "paragraph" | "link" | string;
+    content: string;
 }
 
 export function Post({ author, publishedAt, content }: PostProps) {
